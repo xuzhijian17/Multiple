@@ -1,0 +1,1686 @@
+
+
+2009-07-09 19:04=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1551 MB, Virtual Memory: 1945 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  10056A28 01:00055A28 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:05311000
+EBX:00000000
+ECX:FFFFFFFF
+EDX:000000FF
+ESI:0250CBC0
+EDI:0012FCD8
+CS:EIP:001B:10056A28
+SS:ESP:0023:00DFE90C  EBP:00DFE918
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010286
+
+Call stack:
+Address   Frame     Function            SourceFile
+10056A28  00DFE918  0001:00055A28 D:\AVTOOL\vah\Uncompress\unarc.dll
+100D55D0  00DFE934  0001:000D45D0 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C9F81  00DFE968  0001:000C8F81 D:\AVTOOL\vah\Uncompress\unarc.dll
+100CA051  00DFE980  0001:000C9051 D:\AVTOOL\vah\Uncompress\unarc.dll
+1001429D  00DFE98C  0001:0001329D D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00A76F38  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+5846535C  705C3A64  0000:00000000 
+
+Machine code:
+12 8B 45 0C 83 E8 01 89 45 0C 8B 4D FC 83 C1 01 
+89 4D FC 83 7D 0C 00 76 1E 0F B6 55 F8 8B 45 FC 
+0F B6 08 33 D1 8B 45 F8 C1 E8 08 33 04 95 10 BC 
+11 10 89 45 F8 EB CA 8B 4D F4 8B 55 F8 89 11 8B 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     10056A08       128B 450C83E8             adc cl,[ebx+E8830C45]   
+  6     10056A0E       0189 450C8B4D             add [ecx+4D8B0C45],ecx  
+  1     10056A14       FC                        cld                     
+  3     10056A15       83C1 01                   add ecx,1               
+  3     10056A18       894D FC                   mov [ebp-4],ecx         
+  4     10056A1B       837D 0C 00                cmp dword ptr [ebp+C],0 
+  2     10056A1F       76 1E                     jbe short 10056A3F      
+  4     10056A21       0FB655 F8                 movzx edx,byte ptr [ebp-8]
+  3     10056A25       8B45 FC                   mov eax,[ebp-4]         
+<========EIP========>
+  3     10056A28       0FB608                    movzx ecx,byte ptr [eax]
+  2     10056A2B       33D1                      xor edx,ecx             
+  3     10056A2D       8B45 F8                   mov eax,[ebp-8]         
+  3     10056A30       C1E8 08                   shr eax,8               
+  7     10056A33       330495 10BC1110           xor eax,[edx*4+1011BC10]
+  3     10056A3A       8945 F8                   mov [ebp-8],eax         
+  2     10056A3D       EB CA                     jmp short 10056A09      
+  3     10056A3F       8B4D F4                   mov ecx,[ebp-C]         
+  3     10056A42       8B55 F8                   mov edx,[ebp-8]         
+  2     10056A45       8911                      mov [ecx],edx           
+  2     10056A47       8BE5                      mov esp,ebp             
+
+
+Stack code:
+E0 E3 50 02 FF FF FF FF 00 10 31 05 34 E9 DF 00 
+D0 55 0D 10 00 10 31 05 00 F0 0F FC 6B A8 0C 10 
+00 00 00 00 00 F0 0F FC 68 E9 DF 00 81 9F 0C 10 
+C8 E3 50 02 00 10 31 05 00 F0 0F FC 5C E9 DF 00 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+10056A28  00DFE918  0001:00055A28 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D55D0  00DFE934  0001:000D45D0 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C9F81  00DFE968  0001:000C8F81 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100CA051  00DFE980  0001:000C9051 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+1001429D  00DFE98C  0001:0001329D D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00A76F38  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+5846535C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-07-10 12:40=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1602 MB, Virtual Memory: 1945 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  10014275 01:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:00200000
+EBX:00000000
+ECX:01310000
+EDX:02450000
+ESI:02449BE0
+EDI:0012FCD8
+CS:EIP:001B:10014275
+SS:ESP:0023:00DFE988  EBP:00DFE98C
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+10014275  00DFE98C  0001:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00A76F38  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+5846535C  705C3A64  0000:00000000 
+
+Machine code:
+11 10 EB 99 8B 45 F0 8B E5 5D C3 55 8B EC 51 89 
+4D FC 8B 45 FC 8B 08 8B 55 FC 8B 42 04 8A 55 08 
+88 14 01 8B 45 FC 8B 48 04 83 C1 01 8B 55 FC 89 
+4A 04 8B 45 FC 8B 4D FC 8B 50 04 3B 51 08 75 08 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  2     10014255       1110                      adc [eax],edx           
+  2     10014257       EB 99                     jmp short 100141F2      
+  3     10014259       8B45 F0                   mov eax,[ebp-10]        
+  2     1001425C       8BE5                      mov esp,ebp             
+  1     1001425E       5D                        pop ebp                 
+  1     1001425F       C3                        retn                    
+  1     10014260       55                        push ebp                
+  2     10014261       8BEC                      mov ebp,esp             
+  1     10014263       51                        push ecx                
+  3     10014264       894D FC                   mov [ebp-4],ecx         
+  3     10014267       8B45 FC                   mov eax,[ebp-4]         
+  2     1001426A       8B08                      mov ecx,[eax]           
+  3     1001426C       8B55 FC                   mov edx,[ebp-4]         
+  3     1001426F       8B42 04                   mov eax,[edx+4]         
+  3     10014272       8A55 08                   mov dl,[ebp+8]          
+<========EIP========>
+  3     10014275       881401                    mov [ecx+eax],dl        
+  3     10014278       8B45 FC                   mov eax,[ebp-4]         
+  3     1001427B       8B48 04                   mov ecx,[eax+4]         
+  3     1001427E       83C1 01                   add ecx,1               
+  3     10014281       8B55 FC                   mov edx,[ebp-4]         
+  3     10014284       894A 04                   mov [edx+4],ecx         
+  3     10014287       8B45 FC                   mov eax,[ebp-4]         
+  3     1001428A       8B4D FC                   mov ecx,[ebp-4]         
+  3     1001428D       8B50 04                   mov edx,[eax+4]         
+  3     10014290       3B51 08                   cmp edx,[ecx+8]         
+  2     10014293       75 08                     jnz short 1001429D      
+
+
+Stack code:
+18 00 45 02 38 EA DF 00 57 6B 0C 10 00 00 45 02 
+F0 73 17 FD E0 9B 44 02 48 30 00 00 FF FF 00 00 
+00 00 BE 00 A4 E7 DF 00 00 00 BE 00 6C EA DF 00 
+00 E9 92 7C 54 00 45 02 D0 E9 DF 00 01 A9 0C 10 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+10014275  00DFE98C  0001:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00A76F38  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+5846535C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-07-21 12:29=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1505 MB, Virtual Memory: 1945 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  10014275 01:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:00200000
+EBX:00000000
+ECX:01310000
+EDX:0243F100
+ESI:0000000A
+EDI:0012FCD8
+CS:EIP:001B:10014275
+SS:ESP:0023:00DFE988  EBP:00DFE98C
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+10014275  00DFE98C  0001:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00A76F40  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+5846535C  705C3A64  0000:00000000 
+
+Machine code:
+11 10 EB 99 8B 45 F0 8B E5 5D C3 55 8B EC 51 89 
+4D FC 8B 45 FC 8B 08 8B 55 FC 8B 42 04 8A 55 08 
+88 14 01 8B 45 FC 8B 48 04 83 C1 01 8B 55 FC 89 
+4A 04 8B 45 FC 8B 4D FC 8B 50 04 3B 51 08 75 08 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  2     10014255       1110                      adc [eax],edx           
+  2     10014257       EB 99                     jmp short 100141F2      
+  3     10014259       8B45 F0                   mov eax,[ebp-10]        
+  2     1001425C       8BE5                      mov esp,ebp             
+  1     1001425E       5D                        pop ebp                 
+  1     1001425F       C3                        retn                    
+  1     10014260       55                        push ebp                
+  2     10014261       8BEC                      mov ebp,esp             
+  1     10014263       51                        push ecx                
+  3     10014264       894D FC                   mov [ebp-4],ecx         
+  3     10014267       8B45 FC                   mov eax,[ebp-4]         
+  2     1001426A       8B08                      mov ecx,[eax]           
+  3     1001426C       8B55 FC                   mov edx,[ebp-4]         
+  3     1001426F       8B42 04                   mov eax,[edx+4]         
+  3     10014272       8A55 08                   mov dl,[ebp+8]          
+<========EIP========>
+  3     10014275       881401                    mov [ecx+eax],dl        
+  3     10014278       8B45 FC                   mov eax,[ebp-4]         
+  3     1001427B       8B48 04                   mov ecx,[eax+4]         
+  3     1001427E       83C1 01                   add ecx,1               
+  3     10014281       8B55 FC                   mov edx,[ebp-4]         
+  3     10014284       894A 04                   mov [edx+4],ecx         
+  3     10014287       8B45 FC                   mov eax,[ebp-4]         
+  3     1001428A       8B4D FC                   mov ecx,[ebp-4]         
+  3     1001428D       8B50 04                   mov edx,[eax+4]         
+  3     10014290       3B51 08                   cmp edx,[ecx+8]         
+  2     10014293       75 08                     jnz short 1001429D      
+
+
+Stack code:
+60 F1 43 02 38 EA DF 00 57 6B 0C 10 00 F1 43 02 
+72 02 CB BF D8 E2 43 02 48 30 00 00 FF FF 00 00 
+00 00 BE 00 A4 E7 DF 00 00 00 BE 00 6C EA DF 00 
+00 E9 92 7C 9C F1 43 02 D0 E9 DF 00 01 A9 0C 10 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+10014275  00DFE98C  0001:00013275 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6B57  00DFEA38  0001:000C5B57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100C6135  00DFEA88  0001:000C5135 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100BB755  00DFEEC0  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100E9A6C  00DFEFD0  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D445F  00DFF20C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+100D4664  00DFF2A4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00A76F40  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+5846535C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-09-02 13:08=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1395 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0131F27C
+EBX:0000003F
+ECX:02B23FE8
+EDX:0000A016
+ESI:026BA184
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0131F1D8  EBP:0131F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D90  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 31 01 00 00 00 00 EC F1 31 01 7F 92 02 01 
+7C F2 31 01 A0 F2 31 01 E7 12 02 01 57 E4 26 E6 
+08 20 EB 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+D0 64 74 02 F8 5F 62 02 49 33 00 00 08 20 EB 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D90  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-09 17:32=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1631 MB, Virtual Memory: 1915 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0131F27C
+EBX:0000003F
+ECX:02A48008
+EDX:00009FF6
+ESI:0251B5A4
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0131F1D8  EBP:0131F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D20  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 31 01 00 00 65 00 EC F1 31 01 7F 92 02 01 
+7C F2 31 01 A0 F2 31 01 E7 12 02 01 D2 5C 0F 74 
+C0 6F D9 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+20 4C DE 03 08 E0 A3 02 49 33 00 00 C0 6F D9 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D20  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-10 12:38=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1629 MB, Virtual Memory: 1915 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0131F27C
+EBX:0000003F
+ECX:0288D008
+EDX:00009FF6
+ESI:02160DD4
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0131F1D8  EBP:0131F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D30  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 31 01 00 96 6C 00 EC F1 31 01 7F 92 02 01 
+7C F2 31 01 A0 F2 31 01 E7 12 02 01 AC 42 03 51 
+D0 0F C9 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+48 57 48 02 08 30 88 02 49 33 00 00 D0 0F C9 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D30  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-11 11:16=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1645 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0131F27C
+EBX:0000003F
+ECX:0270BFE8
+EDX:0000A016
+ESI:02265194
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0131F1D8  EBP:0131F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D70  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 31 01 00 00 00 00 EC F1 31 01 7F 92 02 01 
+7C F2 31 01 A0 F2 31 01 E7 12 02 01 6C 26 44 17 
+D0 9F F7 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+70 1F 0F 02 E8 1F 70 02 49 33 00 00 D0 9F F7 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D70  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-13 13:12=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1633 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0131F27C
+EBX:0000003F
+ECX:0279E008
+EDX:00009FF6
+ESI:0234617C
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0131F1D8  EBP:0131F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 31 01 00 00 65 00 EC F1 31 01 7F 92 02 01 
+7C F2 31 01 A0 F2 31 01 E7 12 02 01 58 F0 44 75 
+B8 EF CA 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+70 D5 37 02 E8 9F 64 02 49 33 00 00 B8 EF CA 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0131F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0131F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0131F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0131F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0131F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0131F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0131F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0131F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0131F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0131F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0131FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0131FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-14 13:09=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1626 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00F696E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:012AF27C
+EBX:0000003F
+ECX:026F4FE8
+EDX:0000A016
+ESI:02342174
+EDI:0013FCD8
+CS:EIP:001B:00F696E2
+SS:ESP:0023:012AF1D8  EBP:012AF1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  012AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB927F  012AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB12E7  012AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB1478  012AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2D3A  012AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2F57  012AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB91FD  012AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB8DC5  012AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FFB755  012AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01029A6C  012AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0101445F  012AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01014664  012AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00F696C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00F696C8       080F                      or [edi],cl             
+  2     00F696CA       B6 44                     mov dh,44               
+  2     00F696CC       0201                      add al,[ecx]            
+  3     00F696CE       C1E0 08                   shl eax,8               
+  3     00F696D1       0B45 FC                   or eax,[ebp-4]          
+  3     00F696D4       8945 FC                   mov [ebp-4],eax         
+  3     00F696D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00F696DA       8B11                      mov edx,[ecx]           
+  3     00F696DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00F696DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00F696E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00F696E7       0B55 FC                   or edx,[ebp-4]          
+  3     00F696EA       8955 FC                   mov [ebp-4],edx         
+  3     00F696ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00F696F0       B9 08000000               mov ecx,8               
+  3     00F696F5       2B48 04                   sub ecx,[eax+4]         
+  3     00F696F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00F696FB       D3EA                      shr edx,cl              
+  3     00F696FD       8955 FC                   mov [ebp-4],edx         
+  3     00F69700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 2A 01 00 00 00 00 EC F1 2A 01 7F 92 FB 00 
+7C F2 2A 01 A0 F2 2A 01 E7 12 FB 00 86 7A DE 7B 
+08 80 DD 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+00 7A 39 02 40 17 28 02 49 33 00 00 08 80 DD 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  012AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB927F  012AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB12E7  012AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB1478  012AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2D3A  012AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2F57  012AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB91FD  012AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB8DC5  012AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FFB755  012AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01029A6C  012AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0101445F  012AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01014664  012AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-16 02:31=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1646 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00F696E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:013AF27C
+EBX:0000003F
+ECX:02664FE8
+EDX:0000A016
+ESI:022B2174
+EDI:0013FCD8
+CS:EIP:001B:00F696E2
+SS:ESP:0023:013AF1D8  EBP:013AF1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  013AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB927F  013AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB12E7  013AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB1478  013AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2D3A  013AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2F57  013AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB91FD  013AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB8DC5  013AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FFB755  013AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01029A6C  013AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0101445F  013AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01014664  013AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D20  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00F696C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00F696C8       080F                      or [edi],cl             
+  2     00F696CA       B6 44                     mov dh,44               
+  2     00F696CC       0201                      add al,[ecx]            
+  3     00F696CE       C1E0 08                   shl eax,8               
+  3     00F696D1       0B45 FC                   or eax,[ebp-4]          
+  3     00F696D4       8945 FC                   mov [ebp-4],eax         
+  3     00F696D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00F696DA       8B11                      mov edx,[ecx]           
+  3     00F696DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00F696DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00F696E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00F696E7       0B55 FC                   or edx,[ebp-4]          
+  3     00F696EA       8955 FC                   mov [ebp-4],edx         
+  3     00F696ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00F696F0       B9 08000000               mov ecx,8               
+  3     00F696F5       2B48 04                   sub ecx,[eax+4]         
+  3     00F696F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00F696FB       D3EA                      shr edx,cl              
+  3     00F696FD       8955 FC                   mov [ebp-4],edx         
+  3     00F69700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 3A 01 00 00 00 00 EC F1 3A 01 7F 92 FB 00 
+7C F2 3A 01 A0 F2 3A 01 E7 12 FB 00 FC 7A D0 01 
+08 80 D4 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+00 7A 30 02 40 17 1F 02 49 33 00 00 08 80 D4 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  013AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB927F  013AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB12E7  013AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB1478  013AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2D3A  013AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2F57  013AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB91FD  013AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB8DC5  013AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FFB755  013AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01029A6C  013AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0101445F  013AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01014664  013AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D20  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-18 11:10=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1526 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00F696E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:012AF27C
+EBX:0000003F
+ECX:02638FE8
+EDX:0000A016
+ESI:03CB359C
+EDI:0013FCD8
+CS:EIP:001B:00F696E2
+SS:ESP:0023:012AF1D8  EBP:012AF1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  012AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB927F  012AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB12E7  012AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB1478  012AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2D3A  012AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB2F57  012AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB91FD  012AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00FB8DC5  012AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00FFB755  012AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01029A6C  012AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0101445F  012AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01014664  012AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00F696C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00F696C8       080F                      or [edi],cl             
+  2     00F696CA       B6 44                     mov dh,44               
+  2     00F696CC       0201                      add al,[ecx]            
+  3     00F696CE       C1E0 08                   shl eax,8               
+  3     00F696D1       0B45 FC                   or eax,[ebp-4]          
+  3     00F696D4       8945 FC                   mov [ebp-4],eax         
+  3     00F696D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00F696DA       8B11                      mov edx,[ecx]           
+  3     00F696DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00F696DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00F696E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00F696E7       0B55 FC                   or edx,[ebp-4]          
+  3     00F696EA       8955 FC                   mov [ebp-4],edx         
+  3     00F696ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00F696F0       B9 08000000               mov ecx,8               
+  3     00F696F5       2B48 04                   sub ecx,[eax+4]         
+  3     00F696F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00F696FB       D3EA                      shr edx,cl              
+  3     00F696FD       8955 FC                   mov [ebp-4],edx         
+  3     00F69700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 2A 01 00 04 69 00 EC F1 2A 01 7F 92 FB 00 
+7C F2 2A 01 A0 F2 2A 01 E7 12 FB 00 3B E9 D5 62 
+D0 6F C1 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+A0 6E D7 03 F0 0F 21 02 49 33 00 00 D0 6F C1 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00F696E2  012AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB927F  012AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB12E7  012AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB1478  012AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2D3A  012AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB2F57  012AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB91FD  012AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FB8DC5  012AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00FFB755  012AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01029A6C  012AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0101445F  012AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01014664  012AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6D60  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2009-11-19 11:37=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1527 MB, Virtual Memory: 1916 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00FD96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0141F27C
+EBX:0000003F
+ECX:0274C008
+EDX:00009FF6
+ESI:022F5174
+EDI:0013FCD8
+CS:EIP:001B:00FD96E2
+SS:ESP:0023:0141F1D8  EBP:0141F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0141F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+0102927F  0141F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+010212E7  0141F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+01021478  0141F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+01022D3A  0141F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+01022F57  0141F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+010291FD  0141F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+01028DC5  0141F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+0106B755  0141F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+01099A6C  0141F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+0108445F  0141FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+01084664  0141FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00BD6E10  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A64  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00FD96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00FD96C8       080F                      or [edi],cl             
+  2     00FD96CA       B6 44                     mov dh,44               
+  2     00FD96CC       0201                      add al,[ecx]            
+  3     00FD96CE       C1E0 08                   shl eax,8               
+  3     00FD96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00FD96D4       8945 FC                   mov [ebp-4],eax         
+  3     00FD96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00FD96DA       8B11                      mov edx,[ecx]           
+  3     00FD96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00FD96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00FD96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00FD96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00FD96EA       8955 FC                   mov [ebp-4],edx         
+  3     00FD96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00FD96F0       B9 08000000               mov ecx,8               
+  3     00FD96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00FD96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00FD96FB       D3EA                      shr edx,cl              
+  3     00FD96FD       8955 FC                   mov [ebp-4],edx         
+  3     00FD9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 41 01 00 00 00 00 EC F1 41 01 7F 92 02 01 
+7C F2 41 01 A0 F2 41 01 E7 12 02 01 E5 C3 DB D9 
+08 60 E2 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+38 5F 2F 02 08 D0 73 02 49 33 00 00 08 60 E2 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00FD96E2  0141F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0102927F  0141F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010212E7  0141F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01021478  0141F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022D3A  0141F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01022F57  0141F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+010291FD  0141F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01028DC5  0141F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0106B755  0141F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01099A6C  0141F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+0108445F  0141FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+01084664  0141FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00BD6E10  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A64  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2010-03-30 13:01=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1007 MB, Virtual Memory: 1918 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00D696E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:010AF27C
+EBX:0000003F
+ECX:025BAFE8
+EDX:0000A016
+ESI:01EDE9E4
+EDI:0013FCD8
+CS:EIP:001B:00D696E2
+SS:ESP:0023:010AF1D8  EBP:010AF1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00D696E2  010AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB927F  010AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB12E7  010AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB1478  010AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB2D3A  010AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB2F57  010AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB91FD  010AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB8DC5  010AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DFB755  010AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E29A6C  010AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+00E1445F  010AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+00E14664  010AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00A76E58  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A65  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00D696C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00D696C8       080F                      or [edi],cl             
+  2     00D696CA       B6 44                     mov dh,44               
+  2     00D696CC       0201                      add al,[ecx]            
+  3     00D696CE       C1E0 08                   shl eax,8               
+  3     00D696D1       0B45 FC                   or eax,[ebp-4]          
+  3     00D696D4       8945 FC                   mov [ebp-4],eax         
+  3     00D696D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00D696DA       8B11                      mov edx,[ecx]           
+  3     00D696DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00D696DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00D696E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00D696E7       0B55 FC                   or edx,[ebp-4]          
+  3     00D696EA       8955 FC                   mov [ebp-4],edx         
+  3     00D696ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00D696F0       B9 08000000               mov ecx,8               
+  3     00D696F5       2B48 04                   sub ecx,[eax+4]         
+  3     00D696F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00D696FB       D3EA                      shr edx,cl              
+  3     00D696FD       8955 FC                   mov [ebp-4],edx         
+  3     00D69700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 0A 01 00 02 41 00 EC F1 0A 01 7F 92 DB 00 
+7C F2 0A 01 A0 F2 0A 01 E7 12 DB 00 33 DE E3 18 
+08 A0 81 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+C0 7E ED 01 08 C0 5A 02 49 33 00 00 08 A0 81 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00D696E2  010AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB927F  010AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB12E7  010AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB1478  010AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB2D3A  010AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB2F57  010AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB91FD  010AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB8DC5  010AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DFB755  010AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E29A6C  010AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E1445F  010AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E14664  010AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00A76E58  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A65  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2010-04-04 05:26=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1467 MB, Virtual Memory: 1919 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00D696E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:010AF27C
+EBX:0000003F
+ECX:02560008
+EDX:00009FF6
+ESI:018031B4
+EDI:0013FCD8
+CS:EIP:001B:00D696E2
+SS:ESP:0023:010AF1D8  EBP:010AF1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010246
+
+Call stack:
+Address   Frame     Function            SourceFile
+00D696E2  010AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB927F  010AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB12E7  010AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB1478  010AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB2D3A  010AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB2F57  010AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB91FD  010AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00DB8DC5  010AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00DFB755  010AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E29A6C  010AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+00E1445F  010AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+00E14664  010AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00A76D58  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A65  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00D696C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00D696C8       080F                      or [edi],cl             
+  2     00D696CA       B6 44                     mov dh,44               
+  2     00D696CC       0201                      add al,[ecx]            
+  3     00D696CE       C1E0 08                   shl eax,8               
+  3     00D696D1       0B45 FC                   or eax,[ebp-4]          
+  3     00D696D4       8945 FC                   mov [ebp-4],eax         
+  3     00D696D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00D696DA       8B11                      mov edx,[ecx]           
+  3     00D696DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00D696DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00D696E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00D696E7       0B55 FC                   or edx,[ebp-4]          
+  3     00D696EA       8955 FC                   mov [ebp-4],edx         
+  3     00D696ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00D696F0       B9 08000000               mov ecx,8               
+  3     00D696F5       2B48 04                   sub ecx,[eax+4]         
+  3     00D696F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00D696FB       D3EA                      shr edx,cl              
+  3     00D696FD       8955 FC                   mov [ebp-4],edx         
+  3     00D69700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 0A 01 00 00 00 00 EC F1 0A 01 7F 92 DB 00 
+7C F2 0A 01 A0 F2 0A 01 E7 12 DB 00 36 AD 04 5B 
+08 40 73 02 3F 00 00 00 00 00 00 00 E7 00 00 00 
+D8 A9 0E 02 E8 5F 55 02 49 33 00 00 08 40 73 02 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00D696E2  010AF1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB927F  010AF1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB12E7  010AF2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB1478  010AF2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB2D3A  010AF364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB2F57  010AF378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB91FD  010AF388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DB8DC5  010AF3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00DFB755  010AF810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E29A6C  010AF920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E1445F  010AFB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E14664  010AFBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00A76D58  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A65  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
+
+
+2010-06-09 17:07=====================VEH  Crash Report===================== 
+OS Info: Windows XP Service Pack 3 
+Physics Memory: 2046 MB,  Avail Physics Memory: 1435 MB, Virtual Memory: 1974 MB
+
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00DC96E2 01:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+Registers:
+EAX:0110F27C
+EBX:0000001D
+ECX:01A56008
+EDX:00009FF6
+ESI:01B63FF0
+EDI:0013FCD8
+CS:EIP:001B:00DC96E2
+SS:ESP:0023:0110F1D8  EBP:0110F1E0
+DS:0023  ES:0023  FS:003B  GS:0000
+Flags:00010206
+
+Call stack:
+Address   Frame     Function            SourceFile
+00DC96E2  0110F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E1927F  0110F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+00E112E7  0110F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E11478  0110F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E12D3A  0110F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+00E12F57  0110F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E191FD  0110F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+00E18DC5  0110F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E5B755  0110F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+00E89A6C  0110F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+00E7445F  0110FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+00E74664  0110FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+004068F1  00AA6DB0  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+6275735C  705C3A65  0000:00000000 
+
+Machine code:
+02 8B 4D F8 8B 51 08 0F B6 44 02 01 C1 E0 08 0B 
+45 FC 89 45 FC 8B 4D F8 8B 11 8B 45 F8 8B 48 08 
+0F B6 54 11 02 0B 55 FC 89 55 FC 8B 45 F8 B9 08 
+00 00 00 2B 48 04 8B 55 FC D3 EA 89 55 FC 8B 45 
+
+Disassem code:
+Length  Address        Opcode                    ASM-Code                
+  6     00DC96C2       028B 4DF88B51             add cl,[ebx+518BF84D]   
+  2     00DC96C8       080F                      or [edi],cl             
+  2     00DC96CA       B6 44                     mov dh,44               
+  2     00DC96CC       0201                      add al,[ecx]            
+  3     00DC96CE       C1E0 08                   shl eax,8               
+  3     00DC96D1       0B45 FC                   or eax,[ebp-4]          
+  3     00DC96D4       8945 FC                   mov [ebp-4],eax         
+  3     00DC96D7       8B4D F8                   mov ecx,[ebp-8]         
+  2     00DC96DA       8B11                      mov edx,[ecx]           
+  3     00DC96DC       8B45 F8                   mov eax,[ebp-8]         
+  3     00DC96DF       8B48 08                   mov ecx,[eax+8]         
+<========EIP========>
+  5     00DC96E2       0FB65411 02               movzx edx,byte ptr [ecx+edx+2]
+  3     00DC96E7       0B55 FC                   or edx,[ebp-4]          
+  3     00DC96EA       8955 FC                   mov [ebp-4],edx         
+  3     00DC96ED       8B45 F8                   mov eax,[ebp-8]         
+  5     00DC96F0       B9 08000000               mov ecx,8               
+  3     00DC96F5       2B48 04                   sub ecx,[eax+4]         
+  3     00DC96F8       8B55 FC                   mov edx,[ebp-4]         
+  2     00DC96FB       D3EA                      shr edx,cl              
+  3     00DC96FD       8955 FC                   mov [ebp-4],edx         
+  3     00DC9700       8B45 FC                   mov eax,[ebp-4]         
+
+
+Stack code:
+7C F2 10 01 00 83 02 00 EC F1 10 01 7F 92 E1 00 
+7C F2 10 01 A0 F2 10 01 E7 12 E1 00 92 DF EF D7 
+F0 3F B6 01 AD 00 00 00 00 00 00 00 07 07 07 07 
+38 EF A0 01 88 EE A0 01 21 06 00 00 F0 3F B6 01 
+
+========================
+Local Variables And Parameters
+
+Call stack:
+Address   Frame     Function            SourceFile
+00DC96E2  0110F1E0  0001:000286E2 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E1927F  0110F1EC  0001:0007827F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E112E7  0110F2A0  0001:000702E7 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E11478  0110F2E8  0001:00070478 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E12D3A  0110F364  0001:00071D3A D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E12F57  0110F378  0001:00071F57 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E191FD  0110F388  0001:000781FD D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E18DC5  0110F3D8  0001:00077DC5 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E5B755  0110F810  0001:000BA755 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E89A6C  0110F920  0001:000E8A6C D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E7445F  0110FB5C  0001:000D345F D:\AVTOOL\vah\Uncompress\unarc.dll
+
+00E74664  0110FBF4  0001:000D3664 D:\AVTOOL\vah\Uncompress\unarc.dll
+
+004068F1  00AA6DB0  0001:000058F1 D:\AVTOOL\vah\Uncompress\UnCompress.exe
+
+6275735C  705C3A65  0000:00000000 
+
+========================
+Global Variables
+	'LoadUnarcCom'
+
